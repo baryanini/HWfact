@@ -1,0 +1,89 @@
+*{
+  box-sizing: border-box;
+  font-family: amatic, sans-serif;
+}
+body{
+  background-image: url("/img/back.jpg");
+  background-size: 100%;
+}
+
+h1{
+  color: rgb(254, 75, 75);
+}
+.section{
+  width: 1200px;
+  margin: auto;
+  background: white;
+  padding: 0 30px 30px 30px;
+}
+.medias-link{
+  color:rgb(254, 75, 75);
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px dashed #fe4b4b;
+}
+.socials{
+  flex-grow: 1;
+}
+.medias-contacts-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.medias-contacts-item{
+
+}
+.main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.info{
+  flex-grow: 1;
+  text-align: center;
+}
+.about{
+  display: flex;
+  flex-direction: row;
+}
+.bio{
+  margin-right: 10px;
+  padding: 20px;
+  width: 50%;
+  border: 2px dashed rgb(254, 75, 75);
+  overflow: visible;
+  text-align: left;
+}
+.links{
+  padding: 20px;
+  height: 421px;
+  width: 50%;
+  border: 2px dashed rgb(254, 75, 75);
+}
+.list{
+  list-style-type: none;
+  padding: 0;
+}
+.me{
+  margin-right: 20px;
+}
+.item{
+  margin-bottom: 30px;
+}
+.bio-techs{
+  padding: 0;
+  margin: 0;
+}
+progress{
+  position: absolute;
+  left:130px;
+}
+.bio-techs-item{
+  position: relative;
+}
