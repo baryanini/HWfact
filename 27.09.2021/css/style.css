@@ -3,10 +3,26 @@
   font-family: amatic, sans-serif;
 }
 body{
-  background-image: url("/img/back.jpg");
-  background-size: 100%;
-}
 
+}
+.background{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: -20;
+  width: 100%;
+  height: 200%;
+  justify-content:flex-start;
+  background-color: white;
+  transform: rotate(45deg);
+}
+.band{
+  z-index: -19;
+  width: 150px;
+  height: 100%;
+  margin-right: 100px;
+  background-color: rgba(254, 75, 75, 0.7);
+}
 h1{
   color: rgb(254, 75, 75);
 }
@@ -25,14 +41,50 @@ h1{
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px dashed #fe4b4b;
+  padding-bottom: 30px;
 }
+.fact-logo{
+  flex-grow: 1;
+}
+.logo{
+  width: 70px;
+  height: 70px;
+  transition: transform 0.4s ease-in-out;
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 2;
+}
+.nav-title{
+  position: absolute;
+  color: white;
+  background-color:#fe4b4b;
+  border-radius: 0 15px 15px 15px;
+  padding: 10px;
+  top:57px;
+  left: 65px;
+  z-index: 2;
+  transition: transform 0.4s ease-in-out;
+  transform: scale(0,0);
+}
+.link{
+  position: relative;
+}
+.link:hover .nav-title{
+  transform: scale(1.2,1.2);
+}
+.link:hover .logo{
+  transform: rotate(360deg);
+}
+
 .socials{
   flex-grow: 1;
 }
 .medias-contacts-list{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style-type: none;
 }
 .medias-contacts-item{
@@ -43,6 +95,9 @@ h1{
   flex-direction: row;
   justify-content: space-between;
   padding-top: 20px;
+  border-left: 2px dashed #fe4b4b;
+  border-bottom: 2px dashed #fe4b4b ;
+  border-right: 2px dashed #fe4b4b;
 }
 .info{
   flex-grow: 1;
@@ -86,4 +141,15 @@ progress{
 }
 .bio-techs-item{
   position: relative;
+}
+.footer{
+  align-self: center;
+  position: fixed;
+  bottom: 30px;
+  left:0;
+  right: 0;
+  border: 1px solid #fe4b4b;
+  border-radius: 30px;
+  text-align: center;
+  padding: 0;
 }
