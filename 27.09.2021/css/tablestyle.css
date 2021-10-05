@@ -5,7 +5,9 @@
   border: 2px solid #fe4b4b;
   border-collapse: separate;
 }
-
+.main{
+  min-width: 500px;
+}
 td {
   width: 100px;
   height: 100px;
@@ -45,7 +47,7 @@ td {
 }
 
 .blue .element_name {
-  left: 50px;
+  left: 45px;
 }
 
 .russian_name {

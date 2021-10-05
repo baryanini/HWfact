@@ -1,33 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 *{
   box-sizing: border-box;
-  font-family: amatic, sans-serif;
 }
-body{
 
+body{
+  font-family: 'Source Code Pro', monospace;
 }
+
+ul,li{
+  padding: 0;
+  margin:0;
+}
+
 .background{
   display: flex;
   position: fixed;
   z-index: -20;
-  width: 100%;
-  height: 200%;
+  width: 300%;
+  height: 400%;
+  /*top:-50%;*/
+  left:-30%;
   justify-content:flex-start;
   background-color: white;
   transform: rotate(45deg);
 }
+
 .band{
+  border-radius: 75px;
   z-index: -19;
   width: 150px;
   height: 100%;
   margin-right: 100px;
   background-color: rgba(254, 75, 75, 0.7);
+  animation: mercanie 5s linear infinite;
+}
+@keyframes mercanie {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.band1{
+  animation: katanie 10s ease-in-out infinite;
 }
 
+.band3{
+  animation: katanie 12s ease-in-out 2s infinite;
+}
+
+.band5{
+  animation: katanie 10s ease-in-out 4s infinite;
+}
+.band6{
+  animation: katanie 15s linear 2s infinite;
+}
+@keyframes katanie {
+  0% {
+    height: 100%;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
 h1{
   color: rgb(254, 75, 75);
 }
 .section{
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
   background: white;
   padding: 0 30px 30px 30px;
@@ -43,6 +90,7 @@ h1{
   border-bottom: 3px dashed #fe4b4b;
   padding-bottom: 30px;
 }
+
 .fact-logo{
   flex-grow: 1;
 }
@@ -50,6 +98,10 @@ h1{
   width: 70px;
   height: 70px;
   transition: transform 0.4s ease-in-out;
+}
+.flexgrid{
+  width: 60px;
+  height: 60px;
 }
 .menu{
   display: flex;
@@ -75,21 +127,9 @@ h1{
   transform: scale(1.2,1.2);
 }
 .link:hover .logo{
-  transform: rotate(360deg);
+  transform: rotate(360deg) scale(1.4);
 }
 
-.socials{
-  flex-grow: 1;
-}
-.medias-contacts-list{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  list-style-type: none;
-}
-.medias-contacts-item{
-
-}
 .main{
   display: flex;
   flex-direction: row;
@@ -99,6 +139,13 @@ h1{
   border-bottom: 2px dashed #fe4b4b ;
   border-right: 2px dashed #fe4b4b;
 }
+.me{
+  flex-grow: 2;
+  margin-right: 20px;
+  max-width: 400px;
+  max-height: 500px;
+}
+
 .info{
   flex-grow: 1;
   text-align: center;
@@ -108,26 +155,26 @@ h1{
   flex-direction: row;
 }
 .bio{
+  flex: 3 1 320px;
   margin-right: 10px;
   padding: 20px;
-  width: 50%;
   border: 2px dashed rgb(254, 75, 75);
   overflow: visible;
   text-align: left;
+  min-width: 320px;
 }
 .links{
+  flex:1 20 320px;
   padding: 20px;
   height: 421px;
-  width: 50%;
   border: 2px dashed rgb(254, 75, 75);
+  min-width: 135px;
 }
 .list{
   list-style-type: none;
   padding: 0;
 }
-.me{
-  margin-right: 20px;
-}
+
 .item{
   margin-bottom: 30px;
 }
@@ -142,6 +189,7 @@ progress{
 .bio-techs-item{
   position: relative;
 }
+
 .footer{
   align-self: center;
   position: fixed;
@@ -151,5 +199,81 @@ progress{
   border: 1px solid #fe4b4b;
   border-radius: 30px;
   text-align: center;
-  padding: 0;
+  padding: 10px;
+}
+
+/*.socials{*/
+/*  flex-grow: 1;*/
+/*}*/
+
+.medias-contacts-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.medias-contacts-item{
+
+}
+@media (max-width: 900px) {
+  .me{
+    border-radius: 200px;
+    margin: 0;
+  }
+  .header{
+    flex-direction: column;
+    border-left: 2px dashed #fe4b4b;
+    border-right: 2px dashed #fe4b4b;
+    border-top: 2px dashed #fe4b4b;
+  }
+  .menu {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .main{
+    flex-direction: column;
+    align-items: center;
+  }
+  .bio{
+    margin: 0 20px 0 0;
+  }
+  .medias-contacts-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .medias-contacts-item{
+    margin-bottom: 10px;
+
+  }
+  .footer {
+    position: relative;
+    /*margin-top:35px;*/
+    bottom:0;
+    border-radius: initial;
+    border-top:0;
+  }
+  progress{
+    position: relative;
+    display:block;
+    left: 0;
+  }
+  .footer{
+    border: 2px dashed #fe4b4b;
+    border-top: none;
+  }
+}
+@media (max-width: 600px){
+  .about{
+    flex-direction: column;
+  }
+  .bio{
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .medias-contacts-list{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
 }
