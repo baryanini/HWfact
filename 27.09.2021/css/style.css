@@ -144,9 +144,7 @@ h1{
   margin-right: 20px;
   max-width: 350px;
   max-height: 500px;
-  box-shadow: 0 0 8px #fe4b4b;
 }
-
 .info{
   flex-grow: 1;
   text-align: center;
@@ -216,7 +214,7 @@ progress{
 .medias-contacts-item{
 
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .me{
     border-radius: 200px;
     margin: 0;
@@ -264,7 +262,7 @@ progress{
     border-top: none;
   }
 }
-@media (max-width: 600px){
+@media (max-width: 500px){
   .about{
     flex-direction: column;
   }
