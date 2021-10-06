@@ -2,7 +2,11 @@
 *{
   box-sizing: border-box;
 }
+*::selection{
+  background: #fe4b4b ;
+  color: white;
 
+}
 body{
   font-family: 'Source Code Pro', monospace;
 }
@@ -11,7 +15,21 @@ ul,li{
   padding: 0;
   margin:0;
 }
+a{
+  text-decoration: none;
+  color: navy;
+}
+h1{
+  color: rgb(254, 75, 75);
+}
+.section{
+  max-width: 1200px;
+  margin: auto;
+  background: white;
+  padding: 0 30px 30px 30px;
+}
 
+/*------Фон------*/
 .background{
   display: flex;
   position: fixed;
@@ -70,18 +88,9 @@ ul,li{
     height: 100%;
   }
 }
-h1{
-  color: rgb(254, 75, 75);
-}
-.section{
-  max-width: 1200px;
-  margin: auto;
-  background: white;
-  padding: 0 30px 30px 30px;
-}
-.medias-link{
-  color:rgb(254, 75, 75);
-}
+
+/*-----Шапка-------*/
+
 .header{
   display: flex;
   flex-direction: row;
@@ -129,6 +138,8 @@ h1{
 .link:hover .logo{
   transform: rotate(360deg) scale(1.4);
 }
+
+/*-------Основная часть------*/
 
 .main{
   display: flex;
@@ -189,6 +200,8 @@ progress{
   position: relative;
 }
 
+/*--------Футер-------*/
+
 .footer{
   align-self: center;
   position: fixed;
@@ -214,6 +227,12 @@ progress{
 .medias-contacts-item{
 
 }
+.medias-link{
+  color:rgb(254, 75, 75);
+}
+
+/*----Медиа-запросы-----*/
+
 @media (max-width: 1000px) {
   .me{
     border-radius: 200px;

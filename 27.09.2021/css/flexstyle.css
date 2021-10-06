@@ -2,40 +2,61 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  height: 200vh;
 }
 
 .horizontal{
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width:100%;
-  height: 100vh;
+  min-height: 500px;
+
 }
 
 .horizontal_block{
+  flex-shrink: 0;
   padding:10px;
   width: 250px;
   border:2px solid black;
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*justify-content: center;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .quadro{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 100vh;
 }
 
 .quadro_block{
   padding:10px;
   width: 50%;
-  height: 50vh;
+  min-width: 250px;
   border:2px solid black;
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*justify-content: center;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1000px) {
+  .horizontal{
+    flex-wrap: wrap;
+}
+  .horizontal_block{
+  margin-bottom: 20px}
+}
+@media (max-width: 500px){
+  .quadro{
+  flex-direction: column;
+    align-items: center;
+
+  }
+  .quadro_block{
+    width: 100%;
+    min-width: initial;
+  }
 }
