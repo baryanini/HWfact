@@ -36,12 +36,12 @@ include_once "inc/background.html"
 <?php
 include_once 'inc/header.php'
 ?>
-<main class="main section">
+<main class="main section border">
     <div class="me"></div>
     <div class="info">
         <h1>Алексей Барьянов</h1>
         <div class="about">
-            <div class="bio">
+            <div class="bio border">
                 <p>Работаю в кофейне.</p>
                 <p>Учился в МГТУ. Недоучился в МГТУ.</p>
                 <ul class="bio-techs">Технологии, которые я буду знать в будущем:</ul>
@@ -83,7 +83,7 @@ include_once 'inc/header.php'
                     </progress>
                 </li>
             </div>
-            <div class="links">
+            <div class="links border">
                 <ul class="list">
                     <li class="item">
                         <a target="_blank"

@@ -36,7 +36,7 @@ include_once "inc/background.html"
 <?php
 include_once 'inc/header.php'
 ?>
-<main class="main section">
+<main class="main section border">
     <table class="table">
         <caption>Кусочек таблицы Менделеева</caption>
         <tr>

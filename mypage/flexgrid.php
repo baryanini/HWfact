@@ -35,7 +35,7 @@ include_once "inc/background.html"
 <?php
 include_once 'inc/header.php'
 ?>
-<main class="main section">
+<main class="main section border">
     <div class="horizontal">
         <div class="horizontal_block">
             <img height="180" width="150" src="img/flexes/1.png">

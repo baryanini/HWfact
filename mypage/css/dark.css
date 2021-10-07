@@ -14,7 +14,8 @@ a{
     color: azure;
 }
 h1{
-    color: rgb(254, 75, 75);
+    /*color: rgb(254, 75, 75);*/
+  color:white;
 }
 .section {
     background: #1d1230;
@@ -31,6 +32,17 @@ h1{
 }
 .table{
     background-color: white;
+}
+.border{
+  border-color:#fff;
+}
+/*-----Для флексов - гридов---------*/
+
+.quadro_block{
+  border:2px solid white;
+}
+.horizontal_block{
+  border:2px solid white;
 }
 
 /*-------КНОПКА ТЕМЫ--------*/

@@ -1,4 +1,4 @@
-<footer class="footer section">
+<footer class="footer section border">
   <div class="socials">
     <ul class="medias-contacts-list">
       <li class="medias-contacts-item ">

@@ -1,4 +1,4 @@
-<header class="header section">
+<header class="header section border">
     <div class="fact-logo">
         <a href="https://fact.digital/" target="_blank" title="Fact" class="link">
             <div class="fact_image"></div>

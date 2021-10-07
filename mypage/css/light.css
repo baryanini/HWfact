@@ -9,7 +9,8 @@ a{
     color: navy;
 }
 h1{
-    color: rgb(254, 75, 75);
+    /*color: rgb(254, 75, 75);*/
+  color:black;
 }
 .section{
     background: white;
@@ -21,6 +22,9 @@ h1{
     background-image: url("../img/newme.jpg");
 }
 
+.border{
+  border-color:#fe4b4b;
+}
 /*-------КНОПКА ТЕМЫ--------*/
 
 .btn-container {

@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@font-face {
+  font-family: "BenzinRegular";
+  src: url("../fonts/BenzinRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "BenzinBold";
+  src: url("../fonts/BenzinBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 *{
   box-sizing: border-box;
-  /*animation: bluring 1s ease-in-out;*/
+
 }
 
 @keyframes bluring {
@@ -14,7 +26,6 @@
 }
 *::selection{
   background: #fe4b4b ;
-  /*color: white;*/
 }
 
 body{
@@ -26,11 +37,8 @@ ul,li{
 }
 a{
   text-decoration: none;
-  /*color: navy;*/
 }
-/*h1{*/
-/*  color: rgb(254, 75, 75);*/
-/*}*/
+
 .section{
   max-width: 1200px;
   margin: auto;
@@ -38,6 +46,9 @@ a{
   padding: 30px;
 }
 
+.border{
+  border: 2px dashed #fff;
+}
 /*------Фон------*/
 .background{
   display: flex;
@@ -106,16 +117,15 @@ a{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px dashed #fe4b4b;
-  /*padding-bottom: 30px;*/
   height: 180px;
+  border-top: none;
+
 }
 
 .fact-logo{
   flex-grow: 1;
 }
 .fact_image{
-  /*background-image: url("../img/logo-f-nvi.svg");*/
   width: 230px;
   height: 70px;
   background-size: contain;
@@ -166,9 +176,7 @@ a{
   flex-direction: row;
   justify-content: space-between;
   padding-top: 20px;
-  border-left: 2px dashed #fe4b4b;
-  border-bottom: 2px dashed #fe4b4b ;
-  border-right: 2px dashed #fe4b4b;
+  border-top:none;
 }
 .me{
   flex-grow: 2;
@@ -176,12 +184,17 @@ a{
   background-size: cover;
   background-repeat: no-repeat;
   min-width: 380px;
-  height: 500px;
+  min-height: 500px;
   filter: brightness(1.4);
   transition: filter 0.3s linear;
 }
 .me:hover{
   filter: brightness(2);
+}
+h1{
+  font-family: 'BenzinBold', monospace;
+  font-size: 43px;
+  text-transform: uppercase;
 }
 .info{
   flex-grow: 1;
@@ -193,18 +206,20 @@ a{
 }
 .bio{
   flex: 3 1 320px;
+
   margin-right: 10px;
   padding: 20px;
-  border: 2px dashed rgb(254, 75, 75);
   overflow: visible;
   text-align: left;
   min-width: 320px;
 }
 .links{
   flex:1 20 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 20px;
   height: 421px;
-  border: 2px dashed rgb(254, 75, 75);
   min-width: 135px;
 }
 .list{
@@ -234,7 +249,6 @@ progress{
   position: relative;
   left:0;
   right: 0;
-  border: 2px dashed #fe4b4b;
   border-top: none;
   text-align: center;
   padding: 10px;
