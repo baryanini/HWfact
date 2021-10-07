@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 *{
   box-sizing: border-box;
-  animation: bluring 1s ease-in-out;
+  /*animation: bluring 1s ease-in-out;*/
 }
 
 @keyframes bluring {
@@ -14,7 +14,7 @@
 }
 *::selection{
   background: #fe4b4b ;
-  color: white;
+  /*color: white;*/
 }
 
 body{
@@ -26,16 +26,16 @@ ul,li{
 }
 a{
   text-decoration: none;
-  color: navy;
+  /*color: navy;*/
 }
-h1{
-  color: rgb(254, 75, 75);
-}
+/*h1{*/
+/*  color: rgb(254, 75, 75);*/
+/*}*/
 .section{
   max-width: 1200px;
   margin: auto;
-  background: white;
-  padding: 30px 30px 30px 30px;
+  /*background: white;*/
+  padding: 30px;
 }
 
 /*------Фон------*/
@@ -48,7 +48,7 @@ h1{
   /*top:-50%;*/
   left:-30%;
   justify-content:flex-start;
-  background-color: white;
+  /*background-color: white;*/
   transform: rotate(45deg);
 }
 
@@ -101,12 +101,13 @@ h1{
 /*-----Шапка-------*/
 
 .header{
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px dashed #fe4b4b;
-  padding-bottom: 30px;
+  /*padding-bottom: 30px;*/
   height: 180px;
 }
 
@@ -114,7 +115,7 @@ h1{
   flex-grow: 1;
 }
 .fact_image{
-  background-image: url("../img/logo-f-nvi.svg");
+  /*background-image: url("../img/logo-f-nvi.svg");*/
   width: 230px;
   height: 70px;
   background-size: contain;
@@ -131,7 +132,7 @@ h1{
 }
 .menu{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-grow: 2;
 }
 .nav-title{
@@ -148,6 +149,7 @@ h1{
 }
 .link{
   position: relative;
+  z-index: 5;
 }
 .link:hover .nav-title{
   transform: scale(1.2,1.2);
@@ -155,6 +157,7 @@ h1{
 .link:hover .logo{
   transform: rotate(360deg) scale(1.4);
 }
+
 
 /*-------Основная часть------*/
 
@@ -170,8 +173,10 @@ h1{
 .me{
   flex-grow: 2;
   margin-right: 20px;
-  max-width: 350px;
-  max-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 380px;
+  height: 500px;
   filter: brightness(1.4);
   transition: filter 0.3s linear;
 }
@@ -226,12 +231,11 @@ progress{
 
 .footer{
   align-self: center;
-  position: fixed;
-  bottom: 30px;
+  position: relative;
   left:0;
   right: 0;
-  border: 1px solid #fe4b4b;
-  border-radius: 30px;
+  border: 2px dashed #fe4b4b;
+  border-top: none;
   text-align: center;
   padding: 10px;
 }
@@ -305,6 +309,7 @@ progress{
     border: 2px dashed #fe4b4b;
     border-top: none;
   }
+
 }
 @media (max-width: 500px){
   .about{
@@ -320,3 +325,4 @@ progress{
   }
 
 }
+

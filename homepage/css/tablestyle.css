@@ -4,6 +4,7 @@
   margin: auto;
   border: 2px solid #fe4b4b;
   border-collapse: separate;
+  background-color: white;
 }
 .main{
   min-width: 500px;
@@ -83,6 +84,7 @@ caption {
 td {
   transition: background-color 0.3s ease-in-out,
   transform 0.3s ease-in-out, border 0.3s ease-in-out;
+
 }
 
 td:hover {
