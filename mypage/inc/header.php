@@ -13,6 +13,10 @@
             <img src="img/flexgrid.PNG" class="flexgrid logo">
             <p class="nav-title">Флексы и Гриды</p>
         </a>
+        <a href="array.php" class="link">
+            <img src="img/array.PNG" class="flexgrid logo">
+            <p class="nav-title">Массивы</p>
+        </a>
         <a href="index.php" class="link">
             <img class="home logo" src="img/home.png">
             <p class="nav-title">Домой</p>

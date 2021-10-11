@@ -10,6 +10,7 @@ if(!isset($_SESSION["theme"]))
         $_SESSION["theme"] = "dark";
     }
 }
+echo $_SESSION["theme"];
 ?>
 
 <!DOCTYPE html>
