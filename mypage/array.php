@@ -91,7 +91,7 @@ include_once 'inc/header.php'
             <p class="text num">Задача №4</p>
             <?
             $hw4 = array(
-                'Ivanovs' => array('Ivan', 'Kate', 'Tom', 'Sam'),
+                'Ivanovs' =>['Ivan', 'Kate', 'Tom', 'Sam'],
                 'Petrovs'=>array('Sam', 'Ann', 'Tanya', 'Tom'),
                 'Smith' => array('Kate', 'Sam','Bob'),
             );

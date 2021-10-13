@@ -93,3 +93,11 @@ td:hover {
   transform: scale(1.5, 1.5);
   z-index: 100;
 }
+@media (max-width: 500px){
+  table{
+    transform: scale(0.7);
+  }
+  .main{
+    min-width: initial;
+  }
+}

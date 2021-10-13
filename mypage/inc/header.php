@@ -14,7 +14,7 @@
             <p class="nav-title">Флексы и Гриды</p>
         </a>
         <a href="array.php" class="link">
-            <img src="img/array.PNG" class="flexgrid logo">
+            <img src="img/array.PNG" class="array logo">
             <p class="nav-title">Массивы</p>
         </a>
         <a href="index.php" class="link">

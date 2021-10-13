@@ -10,7 +10,6 @@ if(!isset($_SESSION["theme"]))
         $_SESSION["theme"] = "dark";
     }
 }
-echo $_SESSION["theme"];
 ?>
 
 <!DOCTYPE html>
@@ -50,37 +49,37 @@ include_once 'inc/header.php'
                 <li class="bio-techs-item">
                     HTML,CSS
                     <progress max="100" value="40">
-                        Загружено на <span id="value">30</span>%
+                        <span id="value">30</span>%
                     </progress>
                 </li>
                 <li class="bio-techs-item">
                     JavaScript
                     <progress max="100" value="15">
-                        Загружено на <span id="value">25</span>%
+                         <span id="value">25</span>%
                     </progress>
                 </li>
                 <li class="bio-techs-item">
                     PHP
                     <progress max="100" value="8">
-                        Загружено на <span id="value">25</span>%
+                         <span id="value">25</span>%
                     </progress>
                 </li>
                 <li class="bio-techs-item">
                     Python
                     <progress max="100" value="20">
-                        Загружено на <span id="value">25</span>%
+                         <span id="value">25</span>%
                     </progress>
                 </li>
                 <li class="bio-techs-item">
                     Git
                     <progress max="100" value="30">
-                        Загружено на <span id="value">25</span>%
+                         <span id="value">25</span>%
                     </progress>
                 </li>
                 <li class="bio-techs-item">
                     SQL
                     <progress max="100" value="10">
-                        Загружено на <span id="value">25</span>%
+                         <span id="value">25</span>%
                     </progress>
                 </li>
             </div>
@@ -112,6 +111,42 @@ include_once 'inc/header.php'
         </div>
     </div>
 </main>
+<div class="hw section">
+    <?
+    $a = file_get_contents("index.php");
+    $aLen = mb_strlen($a);
+    $glasnie = ['а','о','у','е','о','э','и','ю','я'];
+    $noGlasLen=mb_strlen(str_replace($glasnie,'',$a));
+    echo $aLen-$noGlasLen.' гласных на странице, даже с этой фразой<br>';
+//    $b=str_word_count($a,1);
+    $norus="\"|qwertyuiopasdfghjklzxcvbnm<>{}=QWERTYUIOPASDFGHJKLZXCVBNM1234567890/-?.,()#$[];%'_!&:+\\";
+    $norus=mb_str_split($norus);
+    $norus[]='аоуеоэиюя';
+    $b = str_replace($norus, '',$a);
+    echo($b).'<br>';
+   $c = mb_str_split($b);
+   for ($i=1;$i<count($c);$i++){
+       if($c[$i] !== ' ' and $c[$i-1]==' '){
+            unset($c[$i-1]);
+       }
+   }
+   print_r($c);
+
+//   $c = explode(' ',$b);
+//   foreach ($c as $key=>$item){
+//       $item=mb_str_split($item);
+//       for($i=0; $i<count($item);$i++){
+//           if($item[$i]==' ' || $item[$i]==''){
+//               unset($c[$key]);
+//           }
+//       }
+//   }
+    echo '<pre>';
+   print_r($b);
+    echo '</pre>';
+    ?>
+
+</div>
 <?
 include_once 'inc/footer.php'
 ?>

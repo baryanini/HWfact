@@ -136,10 +136,7 @@ a{
   height: 70px;
   transition: transform 0.4s ease-in-out;
 }
-.flexgrid{
-  width: 60px;
-  height: 60px;
-}
+
 .menu{
   display: flex;
   justify-content: space-around;
@@ -286,6 +283,10 @@ progress{
     border-left: 2px dashed #fe4b4b;
     border-right: 2px dashed #fe4b4b;
     border-top: 2px dashed #fe4b4b;
+    height: initial;
+  }
+  .fact-logo{
+    margin-bottom: 30px;
   }
   .menu {
     width: 100%;
@@ -326,6 +327,16 @@ progress{
 
 }
 @media (max-width: 500px){
+  .menu{
+    flex-wrap: wrap;
+  }
+
+  .me{
+    min-width: initial;
+    min-height: initial;
+    width: 90%;
+    height: 300px;
+  }
   .about{
     flex-direction: column;
   }
