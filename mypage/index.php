@@ -1,14 +1,38 @@
 <?php
-session_start();
+include_once "inc/TimeCheck.php";
 
-if(!isset($_SESSION["theme"]))
+function HowManyVowel()
 {
-    date_default_timezone_set('GMT+5');
-    if (8 < date('H') and date('H') < 20) {
-        $_SESSION["theme"] = "light";
-    } else {
-        $_SESSION["theme"] = "dark";
+    $a = file_get_contents("index.php");
+    $aLen = mb_strlen($a);
+    $glasnie = ['а', 'о', 'у', 'е', 'о', 'э', 'и', 'ю', 'я'];
+    $noGlasLen = mb_strlen(str_replace($glasnie, '', $a));
+    echo $aLen - $noGlasLen . ' гласных на странице, даже с этой фразой<br>';
+}
+
+function HowManyDays($wasborn)
+{
+    $now = new DateTime();
+    $interval = $wasborn->diff($now);
+    echo $interval->format('%a') . ' дней я прожил<br>';
+}
+
+function HowManyWords()
+{
+    $a = file_get_contents("index.php");
+    $b = mb_strtolower($a);
+    $rusonly = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя ';
+    $rusonly = mb_str_split($rusonly);
+    $b = mb_str_split($b);
+    $c = array_intersect($b, $rusonly);
+    $d = implode('', $c);
+    $e = explode(' ', $d);
+    foreach ($e as $key => $item) {
+        $item = mb_str_split($item);
+        if (array_intersect($item, $rusonly))
+            $f[] = $e[$key];
     }
+    echo count($f).' слов на странице';
 }
 ?>
 
@@ -31,10 +55,10 @@ if(!isset($_SESSION["theme"]))
 <body>
 
 <?
-include_once "inc/background.html"
+include_once "inc/background.html";
 ?>
 <?php
-include_once 'inc/header.php'
+include_once 'inc/header.php';
 ?>
 <main class="main section border">
     <div class="me"></div>
@@ -55,31 +79,31 @@ include_once 'inc/header.php'
                 <li class="bio-techs-item">
                     JavaScript
                     <progress max="100" value="15">
-                         <span id="value">25</span>%
+                        <span id="value">25</span>%
                     </progress>
                 </li>
                 <li class="bio-techs-item">
                     PHP
                     <progress max="100" value="8">
-                         <span id="value">25</span>%
+                        <span id="value">25</span>%
                     </progress>
                 </li>
                 <li class="bio-techs-item">
                     Python
                     <progress max="100" value="20">
-                         <span id="value">25</span>%
+                        <span id="value">25</span>%
                     </progress>
                 </li>
                 <li class="bio-techs-item">
                     Git
                     <progress max="100" value="30">
-                         <span id="value">25</span>%
+                        <span id="value">25</span>%
                     </progress>
                 </li>
                 <li class="bio-techs-item">
                     SQL
                     <progress max="100" value="10">
-                         <span id="value">25</span>%
+                        <span id="value">25</span>%
                     </progress>
                 </li>
             </div>
@@ -110,46 +134,24 @@ include_once 'inc/header.php'
             </div>
         </div>
     </div>
+
 </main>
-<div class="hw section">
-    <?
-    $a = file_get_contents("index.php");
-    $aLen = mb_strlen($a);
-    $glasnie = ['а','о','у','е','о','э','и','ю','я'];
-    $noGlasLen=mb_strlen(str_replace($glasnie,'',$a));
-    echo $aLen-$noGlasLen.' гласных на странице, даже с этой фразой<br>';
-//    $b=str_word_count($a,1);
-    $norus="\"|qwertyuiopasdfghjklzxcvbnm<>{}=QWERTYUIOPASDFGHJKLZXCVBNM1234567890/-?.,()#$[];%'_!&:+\\";
-    $norus=mb_str_split($norus);
-    $norus[]='аоуеоэиюя';
-    $b = str_replace($norus, '',$a);
-    echo($b).'<br>';
-   $c = mb_str_split($b);
-   for ($i=1;$i<count($c);$i++){
-       if($c[$i] !== ' ' and $c[$i-1]==' '){
-            unset($c[$i-1]);
-       }
-   }
-   print_r($c);
 
-//   $c = explode(' ',$b);
-//   foreach ($c as $key=>$item){
-//       $item=mb_str_split($item);
-//       for($i=0; $i<count($item);$i++){
-//           if($item[$i]==' ' || $item[$i]==''){
-//               unset($c[$key]);
-//           }
-//       }
-//   }
-    echo '<pre>';
-   print_r($b);
-    echo '</pre>';
-    ?>
-
-</div>
 <?
 include_once 'inc/footer.php'
 ?>
+<div class="hw section">
+    <?
+
+    HowManyVowel();
+
+    $myBD = DateTime::createFromFormat('d-m-Y', '21-07-1997');
+    HowManyDays($myBD);
+
+    HowManyWords();
+    ?>
+
+</div>
 <script src="js/theme.js"></script>
 </body>
 </html>
