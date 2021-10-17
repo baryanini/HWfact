@@ -138,6 +138,7 @@ a{
 }
 
 .menu{
+  position: relative;
   display: flex;
   justify-content: space-around;
   flex-grow: 2;
@@ -163,6 +164,28 @@ a{
 }
 .link:hover .logo{
   transform: rotate(360deg) scale(1.4);
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+.login_screen, .reg_screen {
+  margin:0;
+  flex-grow: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: deepskyblue;
+  width: 100%;
+  height: 120px;
+  top:-24px;
+  transition: transform 1s ease-in-out;
+  z-index: -10;
+  padding: 0;
 }
 
 

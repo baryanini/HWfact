@@ -49,9 +49,6 @@ h1{
 
 
 .btn-container {
-    position: absolute;
-    top:0;
-    right: -30px;
     align-items: center;
     display: flex;
     flex-direction: column;
