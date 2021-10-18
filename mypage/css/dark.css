@@ -10,6 +10,10 @@ body{
     background: #1d1230;
 }
 
+.login_screen, .reg_screen{
+    background-color: #1d1230;
+}
+
 a{
     color: azure;
 }

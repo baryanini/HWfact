@@ -5,6 +5,10 @@ body{
     background: white;
 }
 
+.login_screen, .reg_screen{
+    background-color: white;
+}
+
 a{
     color: navy;
 }
