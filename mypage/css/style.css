@@ -54,10 +54,10 @@ a{
   display: flex;
   position: fixed;
   z-index: -20;
-  width: 300%;
-  height: 400%;
-  /*top:-50%;*/
-  left:-30%;
+  width: 200%;
+  height: 300% ;
+  top:-20%;
+  left:-20%;
   justify-content:flex-start;
   /*background-color: white;*/
   transform: rotate(45deg);
@@ -192,14 +192,20 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /*top: 0;*/
-  /*right: -410px;*/
   align-items: center;
-  /*background-color: white;*/
-  /*width: 100%;*/
-  height: 200px;
-  /*display: none;*/
+  height: 150px;
+  width: 300px;
+  border: 1px #fe4b4b dashed;
+  border-radius: 50px;
+  padding: 10px;
   transition: transform 1s ease-in-out;
+}
+.reg_block{
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .mmm{
   position: absolute;
@@ -232,6 +238,63 @@ a{
   top:-24px;
   padding: 0;
 }
+.profile_exit_button{
+  position: absolute;
+  right: 0;
+  top:0;
+  border: none;
+  color: red;
+  font-weight: bold;
+  cursor: wait;
+}
+.consequence_text{
+  font-size: 20px;
+  font-weight: bold;
+}
+.pills{
+
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+}
+.choice_button{
+  border: none;
+  background: none;
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+.choice_button:hover{
+  transform: scale(1.2);
+}
+.band_changer{
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chose_band{
+ text-align: center;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #fe4b4b;
+  color:white;
+}
+.black_band_style{
+  background-color: black;
+  color: white;
+  text-align: left;
+}
+.blue_band_style{
+  background-color: blue;
+  color: white;
+  text-align: left;
+}
+.class_band_style{
+  background-color: #fe4b4b;
+  color: white;
+  text-align: left;
+}
 /*-------Основная часть------*/
 
 .main{
@@ -240,6 +303,7 @@ a{
   justify-content: space-between;
   padding-top: 20px;
   border-top:none;
+  min-height: 600px;
 }
 .me{
   flex-grow: 2;
@@ -331,11 +395,37 @@ progress{
   justify-content: space-around;
   list-style-type: none;
 }
-.medias-contacts-item{
-
+.medias-link-phone{
+  background-image: url("../img/medias/phone.png");
+}
+.medias-link-mail{
+  background-image: url("../img/medias/gmail.svg");
+}
+.medias-link-instagram{
+  background-image: url("../img/medias/instagram.svg");
+}
+.medias-link-github{
+  background-image: url("../img/medias/github.svg");
+}
+.medias-link-discord{
+  background-image: url("../img/medias/discord.svg");
+}
+.medias-link-vk{
+  background-image: url("../img/medias/vk.svg");
+}
+.medias-link{
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  background-position: center top;
+  background-clip: border-box;
 }
 .medias-link{
   color:rgb(254, 75, 75);
+
 }
 
 /*----Медиа-запросы-----*/
@@ -374,6 +464,7 @@ progress{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   .medias-contacts-item{
     margin-bottom: 10px;
 

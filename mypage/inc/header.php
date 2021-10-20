@@ -26,13 +26,12 @@ include "inc/sql.php";
         </a>
 
         <?
-        if (isset($_SESSION['login'])){
+        if (isset($_SESSION['login'])) {
             include_once "inc/profile.php";
-        }else{
+        } else {
             include_once "inc/loginscreen.php";
         }
         ?>
-
 
 
     </nav>
@@ -40,26 +39,27 @@ include "inc/sql.php";
         <a class="theme-button" id="theme-button"><span>Сменить тему</span></a>
         <a class="theme-button login-button" id="theme-button2"><span>Профиль</span></a>
     </div>
-    <div>
-        <form method="post">
-            <select name="color">
-                <option value="#fe4b4b">Стандарт</option>
-                <option value="blue">Синий</option>
-                <option value="black">Чёрный</option>
-            </select>
-            <input type="submit" value="Поменять">
-        </form>
-    </div>
+
+    <form class="band_changer" method="post">
+        <select  class="chose_band" name="color" >
+            <option hidden value="none">Фон</option>
+            <option class="class_band_style" value="#fe4b4b">Стандарт</option>
+            <option class="blue_band_style" value="blue">Синий</option>
+            <option class="black_band_style" value="black">Чёрный</option>
+        </select>
+        <input class="chose_band" type="submit" value="Поменять">
+    </form>
+
     <script>
         var log_but = document.getElementById('theme-button2');
         log_but.addEventListener("click", show);
         let currz = true;
+
         function show() {
             if (currz) {
                 currz = false;
                 document.getElementsByClassName('screen')[0].style.zIndex = '10';
-            }
-            else{
+            } else {
                 currz = true;
                 document.getElementsByClassName('screen')[0].style.zIndex = '-10';
             }

@@ -1,8 +1,8 @@
 <form class="screen login_screen" method="post">
-    <a class="mmm">ВХОД</a>
-    <input required placeholder="login" class="si weight" type="text" name="login">
-    <input required placeholder="password" class="si weight" type="text" name="password">
-    <input type="submit" class="weight" value="Войти">
+    <span class="mmm">ВХОД</span>
+    <input required placeholder="login" class="letter" type="text" name="login">
+    <input required placeholder="password" class=" letter" type="text" name="password">
+    <input type="submit" class="letter" value="Войти">
     <?
     if ($_POST['login']) {
         $login = trim($_POST['login']);
@@ -17,6 +17,6 @@
         } else
             echo 'Такого логина нет';
     } else
-        echo '<p class = "liltext">ИЛИ <a class="lilhref" href="reg.php" id="changescreen">ЗАРЕГИСТРИРУЙТЕСЬ</a></p>';
+        echo '<p class = "liltext">ИЛИ <a href="reg.php" >ЗАРЕГИСТРИРУЙТЕСЬ</a></p>';
     ?>
 </form>

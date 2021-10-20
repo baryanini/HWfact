@@ -31,7 +31,7 @@ h1{
     background-image: url("../img/me.jpg");
 }
 /*----------Для менделеева-------*/
-.serial_number,.weight,.element_name,.russian_name{
+.serial_number,.weight,.element_name,.russian_name,.letter{
     color:black;
 }
 .table{

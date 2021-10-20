@@ -1,17 +1,22 @@
 <form class="screen profile_screen" method="post">
-    <input type="submit" value="Выйти" name="quit">
+    <input class="profile_exit_button" type="submit" value="Выйти" name="quit">
     <div>
         <?
-        echo $_SESSION['login'];
-        if($_SESSION['choice']){
-            echo ' Ты нажимал на '.$_SESSION['choice'];
+        echo '<span class="consequence_text">' . $_SESSION['login'] . '</span>';
+        if ($_SESSION['choice']) {
+            echo ' <span class="consequence_text">Ты выбирал ' . $_SESSION['choice'] . '</span>';
         }
         ?>
 
     </div>
-    <div>
-        <button name="choice" value="red"><img src="img/red.png" height="70"></button>
-        <button name="choice" value="blue"><img src="img/blue.png" height="70"></button>
+    <div class="pills">
+        <button onclick="javascript:window.open('prematrix.php')" class="choice_button" name="choice" value="красную">
+            <img src="img/red.png" height="70">
+        </button>
+
+        <button onclick="javascript:window.open('https://thechoiceisyours.whatisthematrix.com/ru/')"  class="choice_button" name="choice" value="синюю">
+            <img src="img/blue.png" height="70">
+        </button>
 
     </div>
 </form>

@@ -154,4 +154,5 @@ include_once 'inc/footer.php'
 </div>
 <script src="js/theme.js"></script>
 </body>
+
 </html>
