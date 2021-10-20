@@ -5,7 +5,7 @@ body{
     background: white;
 }
 
-.login_screen, .reg_screen{
+.login_screen, .reg_screen, .profile_screen{
     background-color: white;
 }
 

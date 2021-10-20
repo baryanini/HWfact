@@ -69,18 +69,19 @@ a{
   width: 150px;
   height: 100%;
   margin-right: 100px;
-  background-color: rgba(254, 75, 75, 0.7);
+  /*background-color: rgba(254, 75, 75, 0.7);*/
   animation: mercanie 5s linear infinite;
+  filter: opacity(0.8);
 }
 @keyframes mercanie {
   0% {
-    opacity: 1;
+    opacity: 0.8;
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
   100% {
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 .band1{
@@ -203,7 +204,7 @@ a{
 .mmm{
   position: absolute;
   left: 20px;
-  top: calc(50%-10px);
+  top: calc(50% - 10px);
   font-size: 20px;
   font-weight: bold;
 }
@@ -218,7 +219,19 @@ a{
 .lilhref{
 
 }
-
+.profile_screen{
+  z-index: -10;
+  margin:0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 120px;
+  top:-24px;
+  padding: 0;
+}
 /*-------Основная часть------*/
 
 .main{

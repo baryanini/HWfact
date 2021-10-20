@@ -20,7 +20,7 @@ include_once "inc/TimeCheck.php";
     </head>
 <body>
 <?php
-include_once "inc/background.html"
+include_once "inc/background.php"
 ?>
 <?php
 include_once 'inc/header.php'
