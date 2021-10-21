@@ -10,6 +10,23 @@
     <link rel="stylesheet" href="css/matrix.css">
     <title>MATRIX</title>
 </head>
+<style>
+    *{
+        font-size: 60px;
+        background:black;
+    }
+
+    #с{
+        display: block;
+        width:100%;
+        height:100%;
+    }
+    p{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+</style>
 <body>
 <div id="matrix" class="workplace-child workplace-matrix">
     <canvas id="c"></canvas>

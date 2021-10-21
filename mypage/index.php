@@ -57,6 +57,7 @@ function HowManyWords()
 <?
 include_once "inc/background.php";
 ?>
+
 <?php
 include_once 'inc/header.php';
 ?>
@@ -115,7 +116,7 @@ include_once 'inc/header.php';
                     </li>
                     <li class="item">
                         <a target="_blank"
-                           href="https://drive.google.com/drive/folders/1xuMiY0iM7Cyxuz24rA9cor6lBG4q-l5q">Материалы</a>
+                           href="https://drive.google.com/drive/folders/1xuMiY0iM7Cyxuz24rA9cor6lBG4q-l5q">Презентации</a>
                     </li>
                     <li class="item">
                         <a target="_blank" href="https://web.telegram.org/?legacy=1#/im?p=g598159099">Телеграм</a>
@@ -129,6 +130,11 @@ include_once 'inc/header.php';
                         <a target="_blank"
                            href="https://docs.google.com/spreadsheets/d/1oqBvO9sWVKwu09ij6d1886EjvpvsKNY0/edit?rtpof=true&sd=true">
                             Журнал</a>
+                    </li>
+                    <li class="item">
+                        <a target="_blank"
+                           href="https://drive.google.com/drive/folders/1gtOWkIPFOiLxcw6xlSJxEa8tWABH-1RR">
+                            Материалы</a>
                     </li>
                 </ul>
             </div>

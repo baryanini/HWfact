@@ -1,5 +1,6 @@
 <form class="screen profile_screen" method="post">
     <input class="profile_exit_button" type="submit" value="Выйти" name="quit">
+    <a class="comment-link" href="comment.php">Оставить коммент</a>
     <div>
         <?
         echo '<span class="consequence_text">' . $_SESSION['login'] . '</span>';

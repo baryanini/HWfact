@@ -25,31 +25,32 @@ include "inc/sql.php";
             <p class="nav-title">Домой</p>
         </a>
 
-        <?
-        if (isset($_SESSION['login'])) {
-            include_once "inc/profile.php";
-        } else {
-            include_once "inc/loginscreen.php";
-        }
-        ?>
+
 
 
     </nav>
-    <div class="btn-container">
-        <a class="theme-button" id="theme-button"><span>Сменить тему</span></a>
-        <a class="theme-button login-button" id="theme-button2"><span>Профиль</span></a>
+    <?
+    if (isset($_SESSION['login'])) {
+        include_once "inc/profile.php";
+    } else {
+        include_once "inc/loginscreen.php";
+    }
+    ?>
+    <div class="header-btn-container">
+        <div class="btn-container">
+            <a class="theme-button" id="theme-button"><span>Сменить тему</span></a>
+            <a class="theme-button login-button" id="theme-button2"><span>Профиль</span></a>
+        </div>
+        <form class="band_changer" method="post">
+            <select  class="chose_band" name="color" >
+                <option hidden value="none">Фон</option>
+                <option class="class_band_style" value="#fe4b4b">Стандарт</option>
+                <option class="blue_band_style" value="blue">Синий</option>
+                <option class="black_band_style" value="black">Чёрный</option>
+            </select>
+            <input class="chose_band" type="submit" value="Поменять">
+        </form>
     </div>
-
-    <form class="band_changer" method="post">
-        <select  class="chose_band" name="color" >
-            <option hidden value="none">Фон</option>
-            <option class="class_band_style" value="#fe4b4b">Стандарт</option>
-            <option class="blue_band_style" value="blue">Синий</option>
-            <option class="black_band_style" value="black">Чёрный</option>
-        </select>
-        <input class="chose_band" type="submit" value="Поменять">
-    </form>
-
     <script>
         var log_but = document.getElementById('theme-button2');
         log_but.addEventListener("click", show);
@@ -58,10 +59,12 @@ include "inc/sql.php";
         function show() {
             if (currz) {
                 currz = false;
-                document.getElementsByClassName('screen')[0].style.zIndex = '10';
+                document.getElementsByClassName('profile_screen')[0].style.display = 'flex';
+                document.getElementsByClassName('menu')[0].style.display = 'none';
             } else {
                 currz = true;
-                document.getElementsByClassName('screen')[0].style.zIndex = '-10';
+                document.getElementsByClassName('profile_screen')[0].style.display = 'none';
+                document.getElementsByClassName('menu')[0].style.display = 'flex';
             }
         }
     </script>
