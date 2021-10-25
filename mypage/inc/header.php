@@ -59,11 +59,11 @@ include "inc/sql.php";
         function show() {
             if (currz) {
                 currz = false;
-                document.getElementsByClassName('profile_screen')[0].style.display = 'flex';
+                document.getElementsByClassName('screen')[0].style.display = 'flex';
                 document.getElementsByClassName('menu')[0].style.display = 'none';
             } else {
                 currz = true;
-                document.getElementsByClassName('profile_screen')[0].style.display = 'none';
+                document.getElementsByClassName('screen')[0].style.display = 'none';
                 document.getElementsByClassName('menu')[0].style.display = 'flex';
             }
         }

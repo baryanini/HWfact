@@ -12,7 +12,7 @@ include_once "inc/TimeCheck.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/home.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/flexgrid.PNG" type="image/x-icon">
     <link rel="stylesheet" href="css/normilize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flexstyle.css">
