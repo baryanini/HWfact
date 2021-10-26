@@ -31,7 +31,7 @@
       </li>
       <li class="medias-contacts-item">
         <div class="medias-item vk">
-          <a href="" target="_blank" class="medias-link medias-link-vk">Алексей Барьянов</a>
+          <a href="https://vk.com/baryanov" target="_blank" class="medias-link medias-link-vk">Алексей Барьянов</a>
         </div>
       </li>
     </ul>

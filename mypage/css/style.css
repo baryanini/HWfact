@@ -316,12 +316,18 @@ h1{
   text-transform: uppercase;
 }
 .info{
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   text-align: center;
+  /*justify-content: space-between;*/
 }
 .about{
+
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
+
 }
 .bio{
   flex: 3 1 320px;
@@ -338,7 +344,7 @@ h1{
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-  height: 421px;
+  /*height: 441px;*/
   min-width: 135px;
 }
 .list{
@@ -424,6 +430,15 @@ progress{
 @media (max-width: 1000px) {
   .background{
     display: none;
+  }
+  .band_changer{
+    display: none;
+  }
+  .nav-title{
+    display: none;
+  }
+  .link:hover .logo{
+    transform: none;
   }
   .me{
     border-radius: 200px;

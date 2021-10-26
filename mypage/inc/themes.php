@@ -1,4 +1,4 @@
-<?php
+<?php // штука для сохранения темы
 session_start();
 
 if(isset($_GET["theme"]))

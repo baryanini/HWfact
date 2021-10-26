@@ -1,5 +1,9 @@
 <?
-include "inc/sql.php";
+$host='localhost'; //подключение соединения с БД
+$login='Regina';
+$password='1';
+$dbname='users';
+$db_con= mysqli_connect($host,$login,$password,$dbname) or die('соединение с базой не установлено');
 ?>
 <header class="header section border">
     <div class="fact-logo">
@@ -30,7 +34,7 @@ include "inc/sql.php";
 
     </nav>
     <?
-    if (isset($_SESSION['login'])) {
+    if (isset($_SESSION['login'])) { // профиль или авторизация и регистрация
         include_once "inc/profile.php";
     } else {
         include_once "inc/loginscreen.php";
@@ -51,7 +55,7 @@ include "inc/sql.php";
             <input class="chose_band" type="submit" value="Поменять">
         </form>
     </div>
-    <script>
+    <script> // меняет блок меню/авторизацию
         var log_but = document.getElementById('theme-button2');
         log_but.addEventListener("click", show);
         let currz = true;

@@ -32,7 +32,7 @@ include_once 'inc/header.php'
     </form>
     <?
     if ($_POST['mail']){
-        mail('mne@mail.ru','comment',$_POST['mail']);
+        mail('mne@mail.ru','comment',$_POST['mail'],'from '.$_SESSION['login']);
         echo '<p>Спасибо, люблю письма</p>';
     }
     ?>

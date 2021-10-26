@@ -73,19 +73,19 @@ include_once 'inc/header.php';
                 <br>
                 <li class="bio-techs-item">
                     HTML,CSS
-                    <progress max="100" value="40">
+                    <progress max="100" value="45">
                         <span id="value">30</span>%
                     </progress>
                 </li>
                 <li class="bio-techs-item">
                     JavaScript
-                    <progress max="100" value="15">
+                    <progress max="100" value="13">
                         <span id="value">25</span>%
                     </progress>
                 </li>
                 <li class="bio-techs-item">
                     PHP
-                    <progress max="100" value="8">
+                    <progress max="100" value="15">
                         <span id="value">25</span>%
                     </progress>
                 </li>
@@ -103,7 +103,7 @@ include_once 'inc/header.php';
                 </li>
                 <li class="bio-techs-item">
                     SQL
-                    <progress max="100" value="10">
+                    <progress max="100" value="15">
                         <span id="value">25</span>%
                     </progress>
                 </li>

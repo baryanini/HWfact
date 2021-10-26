@@ -28,20 +28,23 @@ include_once 'inc/header.php'
 <main class="main section border">
     <div class="reg_block">
         <h1>РЕГИСТРАЦИЯ</h1>
-        <form class="screen reg_screen" method="post">
+        <form class=" reg_screen" method="post">
             <input required placeholder="login" class="si weight" type="text" name="reg_login">
             <input required placeholder="password" class="si weight" type="text" name="reg_password">
             <input type="submit" class="weight" value="Зарегистрироваться">
             <?
-            if ($_POST['reg_login']) {
+            if ($_POST['reg_login']) { // регистрация
                 $login = trim($_POST['reg_login']);
                 $pas = hash('sha256', trim($_POST['reg_password']));
-                if (isset($bass[$login]))
+                $query_login=mysqli_query($db_con,'SELECT login FROM users WHERE login = '.$login);
+                $count = mysqli_fetch_all($query_login,1); // в бд такой логин есть ?
+                if ($count)
                     echo 'Такой логин уже есть';
                 else {
-                    $nuser = '$bass[\'' . $login . '\'] = \'' . $pas . '\';';
-                    file_put_contents('inc/sql.php', $nuser, FILE_APPEND);
+                    $nuser = "INSERT INTO `users`(`login`, `password`) VALUES ('".$login."', '".$pas."')";
+                    mysqli_query($db_con, $nuser);
                     echo 'Успешная регистрация';
+
                 }
             } else
             //            echo '<p class = "liltext">ИЛИ <a class="lilhref" href="#" id="changescreen">ВОЙДИТЕ</a></p>';

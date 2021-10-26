@@ -29,6 +29,6 @@ function ChangeTheme()
 function Save(theme)
 {
     var Request = new XMLHttpRequest();
-    Request.open("GET", "./themes.php?theme=" + theme, true); //У вас путь может отличаться
+    Request.open("GET", "../inc/themes.php?theme=" + theme, true); //У вас путь может отличаться
     Request.send();
 }
