@@ -1,5 +1,5 @@
 <?php
-include_once "inc/TimeCheck.php";
+include_once 'classes/Classes.php';
 ?>
 <!DOCTYPE html>
 <html lang="ru">

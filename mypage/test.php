@@ -1,8 +1,5 @@
 <?php
-$hostname='localhost';
-$username='baryanov';
-$password='1';
-$dbname='sql';
-
-mysqli_connect($hostname,$username,$password,$dbname);
+require 'js/testClass.php';
+$Donald = new Duck('Donald', 12,10);
+$Donald->swim();
 ?>

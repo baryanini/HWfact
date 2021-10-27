@@ -1,10 +1,3 @@
-<?
-$host='localhost'; //подключение соединения с БД
-$login='Regina';
-$password='1';
-$dbname='users';
-$db_con= mysqli_connect($host,$login,$password,$dbname) or die('соединение с базой не установлено');
-?>
 <header class="header section border">
     <div class="fact-logo">
         <a href="https://fact.digital/" target="_blank" title="Fact" class="link">

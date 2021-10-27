@@ -1,5 +1,5 @@
 <?php
-include_once "inc/TimeCheck.php";
+include_once 'classes/Classes.php';
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -33,21 +33,7 @@ include_once 'inc/header.php'
             <input required placeholder="password" class="si weight" type="text" name="reg_password">
             <input type="submit" class="weight" value="Зарегистрироваться">
             <?
-            if ($_POST['reg_login']) { // регистрация
-                $login = trim($_POST['reg_login']);
-                $pas = hash('sha256', trim($_POST['reg_password']));
-                $query_login=mysqli_query($db_con,'SELECT login FROM users WHERE login = '.$login);
-                $count = mysqli_fetch_all($query_login,1); // в бд такой логин есть ?
-                if ($count)
-                    echo 'Такой логин уже есть';
-                else {
-                    $nuser = "INSERT INTO `users`(`login`, `password`) VALUES ('".$login."', '".$pas."')";
-                    mysqli_query($db_con, $nuser);
-                    echo 'Успешная регистрация';
-
-                }
-            } else
-            //            echo '<p class = "liltext">ИЛИ <a class="lilhref" href="#" id="changescreen">ВОЙДИТЕ</a></p>';
+            $my_page->Registration();
             ?>
         </form>
     </div>
